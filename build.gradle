@@ -1,9 +1,18 @@
 plugins {
   id 'base'
 }
+apply plugin: 'java'
 
 description = 'A exercise repo for JAVA'
 version = '1.0'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.+'
+}
 
 task copy(type: Copy) {
   from 'src'
@@ -18,5 +27,4 @@ task hello {
   doLast {
     println 'Hello, World!'
   }
-  
 }
